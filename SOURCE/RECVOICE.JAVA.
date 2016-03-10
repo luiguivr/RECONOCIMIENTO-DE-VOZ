@@ -1,6 +1,9 @@
 package pkg2parcialia;
 
+import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import javax.speech.Central;
 import javax.speech.EngineModeDesc;
 import javax.speech.recognition.Recognizer;
@@ -50,10 +53,69 @@ public class Main extends ResultAdapter{
                 //muestra 
                 System.exit(0);
             }//fin del if salir
+            else
+                if(palabra.equals("cerrar")){
+                System.out.println("cerrando programa");
+                //muestra 
+                System.exit(0);
+            }//fin de cerrar 
+            else
+                if(palabra.equals("facebook")) {
+			try { System.out.println("Abriendo Facebook...");
+				// Se lanza el ejecutable. 
+				Process p=Runtime.getRuntime().exec ("cmd.exe /c start Chrome www.facebook.com"); 
+				// Se obtiene el stream de salida del programa 
+					InputStream is = p.getInputStream(); 
+					/* Se prepara un bufferedReader para poder leer la salida más comodamente. */ 
+					BufferedReader br = new BufferedReader (new InputStreamReader (is));
+					// Se lee la primera linea 
+					String aux = br.readLine(); 
+				    while (aux!=null) { 
+						System.out.println (aux); 
+						aux = br.readLine(); 
+					} 
+				} catch (Exception es) { 
+					es.printStackTrace(); 
+				} 
+                }//fin facebook
+                else
+                if(palabra.equals("paint")) {
+			try { System.out.println("Abriendo paint...");
+				// Se lanza el ejecutable. 
+				Process p=Runtime.getRuntime().exec ("cmd.exe /c start pbrush"); 
+				// Se obtiene el stream de salida del programa 
+					InputStream is = p.getInputStream(); 
+					/* Se prepara un bufferedReader para poder leer la salida más comodamente. */ 
+					BufferedReader br = new BufferedReader (new InputStreamReader (is));
+					// Se lee la primera linea 
+					String aux = br.readLine(); 
+				    while (aux!=null) { 
+						System.out.println (aux); 
+						aux = br.readLine(); 
+					} 
+				} catch (Exception es) { 
+					es.printStackTrace(); 
+				} 
+                }//fin word
+                else
+                if(palabra.equals("hola")) {
+			 
+				System.out.println("Hola que tal ");
+				// Se lanza el ejecutable. 
+				 
+                }//fin hola
+                else
+                if(palabra.equals("chao")) {
+			 
+				System.out.println("hasta luego ");
+				// Se lanza el ejecutable. 
+				 
+                }//fin que haces
             else{
                 recognizer.suspend();
                 recognizer.resume();
             }//fin del else de salir
+            
         }//fin del try
         catch(Exception ex){
             System.out.println("ha ocurrido un error" + ex);
