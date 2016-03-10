@@ -1,4 +1,4 @@
-# RECONOCIMIENTO-DE-VOZ
+# RECVOICE
 PROYECTO DE INTELIGENCIA ARTIFICIAL 5 SEMESTRE 2 PARCIAL FCFM
 
 El proyeco consiste en reconocer las palabras que dicta el usuario por medio del microfono y reconocer las palabras que dices segun las palabras que tengas en el documento grammer.
