@@ -1,6 +1,5 @@
 #JSGF V1.0;
 grammar com.sarf.talkingjava.example;
-public <startExample> = (apagar luz del cuarto | apagar luz de la sala | 
-apagar luz de la biblioteca | encender sala | encender biblioteca |encender cuarto |
-encender todo ) *;
-public <endExample> = [salir | Salir ];
+public <startExample> = (hola  |  facebook |
+paint | chao) *;
+public <endExample> = [ salir | cerrar ];
